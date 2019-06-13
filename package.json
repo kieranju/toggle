@@ -1,0 +1,36 @@
+{
+  "name": "toggle",
+  "version": "0.0.1",
+  "description": "Simple element class toggling",
+  "main": "index.js",
+  "private": true,
+  "author": {
+    "name": "Kieran Utz",
+    "email": "kieranju@me.com"
+  },
+  "homepage": "https://github.com/kieranju/toggle",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kieranju/toggle"
+  },
+  "keywords": [
+    "toggle",
+    "dom"
+  ],
+  "bugs": {
+    "url": "https://github.com/kieranju/toggle/issues"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.9.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.2"
+  }
+}
