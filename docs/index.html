@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Kieran Utz | Toggle</title>
+        <style>
+            html, body {
+                max-width: 1080px;
+                height: 100%;
+                margin: 0 auto;
+                font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+                -webkit-user-select: none;
+                user-select: none;
+            }
+            .row, .col {
+                display: flex;
+                flex-grow: 1;
+                flex-shrink: 1;
+            }
+            .col {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .trigger,
+            .receiver {
+                width: 100%;
+                font-size: 80px;
+                align-items: center;
+                display: flex;
+                flex-grow: 1;
+                flex-shrink: 1;
+                transition: all 0.1s;
+            }
+            .trigger > span, .receiver > span {
+                width: 100%;
+                text-align: center;
+            }
+            .trigger.active,
+            .receiver.enabled {
+                color: #eeeeee;
+                background: #111111;
+            }
+        </style>
+        <script src="./index.js"></script>
+    </head>
+    <body>        
+        <div class="row">
+            <div class="col triggers">
+                <h1>Triggers</h1>
+                <div class="trigger" data-toggle-trigger="alpha" data-toggle="active"><span>&diamondsuit;</span></div>
+                <div class="trigger" data-toggle-trigger="beta" data-toggle="active"><span>&spadesuit;</span></div>
+                <div class="trigger" data-toggle-trigger="alpha" data-toggle="active"><span>&diamondsuit;</span></div>
+                <div class="trigger" data-toggle-trigger="beta" data-toggle="active"><span>&spadesuit;</span></div>
+                <div class="trigger" data-toggle-trigger="beta" data-toggle="active"><span>&spadesuit;</span></div>
+            </div>
+            <div class="col receivers">
+                <h1>Receivers</h1>
+                <div class="receiver" data-toggle-receiver="beta" data-toggle="enabled"><span>&spadesuit;</span></div>
+                <div class="receiver" data-toggle-receiver="alpha" data-toggle="enabled"><span>&diamondsuit;</span></div>
+                <div class="receiver" data-toggle-receiver="beta" data-toggle="enabled"><span>&spadesuit;</span></div>
+                <div class="receiver" data-toggle-receiver="alpha" data-toggle="enabled"><span>&diamondsuit;</span></div>
+                <div class="receiver" data-toggle-receiver="alpha" data-toggle="enabled"><span>&diamondsuit;</span></div>
+                
+            </div>
+        </div>
+        <script>new ToggleHandler(); // Initialize toggles</script>
+    </body>
+</html>
+
